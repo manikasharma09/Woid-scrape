@@ -1,0 +1,50 @@
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	{% block head %}
+	<title>Home</title>
+	{% endblock %}
+</head>
+<body>
+	<br>
+	<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">News Reader</a>
+    <div class="collapse navbar-collapse" id="navbarsExample03">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link " href="http://digg.com/">Digg</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link " href="https://www.reddit.com/">Medium</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>News</h1>
+    </div>
+  </div>
+  <div class="container">
+    <div class="container">
+      <h3><b>Digg</b></h3>
+    </div>
+    {% for i in p %}
+    <div class="container">
+      <h5>{{i}}</h5><br><br>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="container">
+    <div class="container">
+      <h3><b>Medium</b></h3>
+    </div>
+    {% for i in m %}
+    <div class="container">
+      <h5>{{i}}</h5><br><br>
+    </div>
+    {% endfor %}
+  </div>
+  </div>
+</body>
+</html>
